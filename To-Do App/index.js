@@ -203,6 +203,7 @@ function changelayout() {
     cardElement.classList.add("expanded");
   }
 }
+// function for adding an item in the list of items
 function back() {
   mainContain2.style.display = "none";
   mainContain.style.display = "block";
