@@ -62,8 +62,9 @@ html{
 }
 
 body{
-  font-family:var(--body-font);
+  
   margin: var(--header-height) 0 0 0;
+  font-family:var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   color: var(--dark-color);
@@ -195,7 +196,7 @@ img{
 /*Change color header*/
 .scroll-header{
   background-color: var(--white-color);
-  box-shadow: 0 2px 4 px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 
 
@@ -214,7 +215,7 @@ img{
   display: flex;
   justify-content: center;
   align-self: center;
-  margin-top: 36%;
+  /* margin-top: 36%; */
 }
 
 .home__shape{
@@ -283,9 +284,16 @@ transform: translateX(.25rem);
 
 /*===== FEATURED =====*/
 .featured__container{
+  display: grid;
+gap: 2rem;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+margin: 2rem;
+}
+/* .featured__container {
   row-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
-}
+  column-gap: 0;
+} */
 
 .sneaker{
   position: relative;
@@ -293,7 +301,6 @@ transform: translateX(.25rem);
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  /* background-color: #141414; */
   background-color: var(--dark-color-lighten);
   border-radius: .5rem;
   transition: .3s;
@@ -334,11 +341,30 @@ transform: translateX(.25rem);
   transform: translateY(-.5rem);
 }
 
+.sneaker__pages{
+margin-top: var(--mb-6);
+}
+
+.sneaker__pag{
+  padding: .5rem 1rem;
+  border: 1px solid var(--dark-color) ;
+}
+
+.sneaker__pag:hover{
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+
+
 
 /*===== COLLECTION =====*/
 .collection__container{
-row-gap: 2rem;
+  display: grid;
+gap: 2rem;
 justify-content: center;
+margin: 2rem;
+
 }
 
 .collection__card{
@@ -378,8 +404,10 @@ justify-content: center;
 
 /*===== WOMEN SNEAKERS =====*/
 .women__container{
-  row-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: grid;
+gap: 2rem;
+grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+margin: 2rem;
 }
 
 
@@ -412,7 +440,9 @@ justify-content: center;
 
 /*===== NEW COLLECTION  =====*/
 .new_container{
-  row-gap: 2rem;
+ 
+  gap: 2rem;
+  margin: 10px;
 }
 
 .new__mens{
@@ -422,6 +452,7 @@ justify-content: center;
   background-color: var(--dark-color-lighten);
   border-radius: .5rem;
   padding: 2rem;
+  align-items: center;
 }
 
 .new__mens-img{
@@ -520,6 +551,7 @@ justify-content: center;
 /*===== FOOTER =====*/
 .footer__container{
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 15px;
 }
 
 .footer__box{
@@ -527,7 +559,7 @@ justify-content: center;
 }
 
 .footer__title{
-  font-size: var(--big-font-size);
+  font-size: var(--bigger-font-size);
 }
 
 .footer__link{
@@ -550,4 +582,131 @@ justify-content: center;
 }
 
 /* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 576px) {
+.collection__container{
+  grid-template-columns: 415px;
+}
 
+.collection__img{
+  width: 260px;
+}
+.offer__container{
+  grid-template-columns: max-content max-content;
+}
+.offer__data{
+  text-align: center;
+}
+.new__mens{
+  align-items: center;
+}
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    margin: 0;
+  }
+
+  .section{
+    padding: 7rem 0 3rem;
+
+  }
+
+  .section-title::after{
+    width: 76px;
+  }
+  .nav{
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__menu{
+    margin-left: auto;
+  }
+
+  .nav__list{
+    display: flex;
+
+  }
+  .nav__item{
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+
+  .nav__toggle{
+    display: none;
+    }
+
+    .home__container{
+      display: grid;
+      height: 100vh;
+      grid-template-columns: max-content max-content;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .home__sneaker{
+      order: 1;
+    }
+
+    .home__shape{
+      width: 376px;
+      height: 376px;
+    }
+
+    .home__img{
+      width: 470px;
+      top: 3.5rem;
+      right: 0;
+      left: -3rem;
+    }
+
+    .newsletter__container{
+      grid-template-columns: max-content max-content;
+      justify-content: center;
+      align-items: center;
+      padding: 4.5rem 2rem;
+      column-gap: 3rem;
+    }
+
+    .newsletter__description{
+      margin-bottom: 0;
+
+    }
+    .newsletter__subscribe{
+      width: 360px;
+      height: max-content;
+
+    }
+    .new__mens{
+      align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px){
+  .bg-grid{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__container{
+    column-gap: 8rem;
+  }
+
+  .collection__container{
+    grid-template-columns: repeat(2, 415px);
+  }
+
+  .new__container{
+    grid-template-columns: max-content 1fr;
+  }
+
+  .new__mens{
+    align-items: center;
+justify-content: flex-end;
+padding: 4rem 2rem;
+  }
+
+  .new__mens-img{
+    margin-bottom: var(--mb-6);
+  }
+}
