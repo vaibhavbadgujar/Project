@@ -88,24 +88,24 @@ Featured Luxury Cars
 .featured__title | .featured__subtitle | .featured__price
 Tesla
 Model X
-$98,900
+$98,900 // 8222016.89
 
 Tesla
 Model 3
-$45,900
+$45,900 // 3815880.44
 
 Audi
 E-tron
-$175,900
+$175,900 // 14623384.94
 
 Porsche
 Boxster 987
-$126,900
+$126,900 // 10549787.09
 
 
 Porsche
 Panamera
-$126,900
+$126,900 // 10549787.09
 
 ========== OFFER ==========
 .section__title
@@ -149,4 +149,4 @@ https://www.instagram.com/
 https://twitter.com/
 
 .footer__copy
-&#169; Bedimcode. All rigths reserved
+vaibhavbadgujar2016@gmail.com
