@@ -7,4 +7,4 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 
-![](/preview.png)
+![](/img.jpg)
